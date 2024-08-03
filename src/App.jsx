@@ -87,6 +87,13 @@ function App() {
   function resetExpenses() {
     setExpenseList([]);
     localStorage.removeItem("EXPENSES");
+    localStorage.removeItem("TOTALCOSTS");
+    setTotalCosts(() => {
+      return labels.reduce((pack, label) => {
+        pack[label] = 0;
+        return pack;
+      }, {})
+    })
   }
 
   function deleteAnExpense(id, cost, type) {
