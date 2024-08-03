@@ -141,3 +141,19 @@ canvas {
   padding: 20px;
 
 }
+
+.statistics {
+  height: 250px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.statisticssentence {
+  display: grid;
+}
+
+.statistics h1 {
+  color: rgb(100, 59, 235);
+  justify-self: center;
+}

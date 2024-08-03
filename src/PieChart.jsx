@@ -23,7 +23,9 @@ function PieChart( {labels, values} ) {
           "cyan",
           "#5F9EA0",
           "#D2691E",
-          "#DC143C"
+          "#DC143C",
+          "#B8860B",
+          "#20B2AA"
         ],
         borderWidth: 1,
       },

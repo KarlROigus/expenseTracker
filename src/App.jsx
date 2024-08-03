@@ -6,7 +6,7 @@ import PieChart from './PieChart';
 function App() {
 
   const labels = ["Utilities", "Insurances", "PhoneAndInternet", "Gym",
-  "Subscriptions", "Groceries", "EatingOut", "Loan", "Clothes", "SkinCare", "Other"];
+  "Subscriptions", "Groceries", "EatingOut", "Lunch", "Loan", "Clothes", "SkinCare", "Other"];
 
   function createParsedValues(input) {
 
@@ -156,7 +156,7 @@ function App() {
               <legend>Expense</legend>
               <form action="#" className="newexpenseform" onSubmit={handleFormSubmit}>
                 <label htmlFor="expenseType">Expense Type: </label>
-                <select name="cars" id="expenseType">
+                <select name="expenseType" id="expenseType">
                   <option value=""></option>
                   <option value="Utilities">Utility</option>
                   <option value="Insurances">Insurance</option>
@@ -165,9 +165,10 @@ function App() {
                   <option value="Subscriptions">Subscription</option>
                   <option value="Groceries">Groceries</option>
                   <option value="EatingOut">Eating Out</option>
+                  <option value="Lunch">Lunch</option>
                   <option value="Loan">Loan</option>
                   <option value="Clothes">Clothes</option>
-                  <option value="Skincare">Skin Care</option>
+                  <option value="SkinCare">Skin Care</option>
                   <option value="Other">Other</option>
                 </select>
 
@@ -185,11 +186,17 @@ function App() {
           </fieldset>
           }
         </div>
-      <div className="rightPart">
-        <PieChart labels={labels} values={Object.values(totalCosts)}/>
+        <div className="rightPart">
+          <PieChart labels={labels} values={Object.values(totalCosts)}/>
+        </div>
+      
       </div>
-      </div>
-
+      <div className="statistics">
+          <div className="statisticssentence">
+            <h1>YOUR TOTAL SPENDING IS: </h1>
+            <h1>{Object.values(totalCosts).reduce((prev, current) => prev + current, 0)} €</h1>
+          </div>
+     </div>
     </>
   )
 }
