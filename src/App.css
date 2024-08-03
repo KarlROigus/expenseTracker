@@ -37,9 +37,9 @@ h1 {
 }
 
 li {
-  display: flex;
-  flex-direction: column;
-  font-weight:bolder;
+  display: grid;
+  min-width: 270px;
+  grid-auto-flow: row;
   border: 0.5px solid gray;
   border-radius: 10px;
   box-shadow: 3px 3px 3px #888888;
@@ -68,6 +68,9 @@ li {
 
 fieldset {
   border: 0.5px solid gray;
+  width: 75%;
+  margin: 20px;
+  min-width: 270px;
 }
 
 ul {
@@ -96,7 +99,7 @@ ul {
 textarea {
   background-color: #f1f1f1;
   border: 0.5px solid gray;
-  width: 40%;
+  width: 80%;
 }
 
 .deletebutton {
@@ -114,4 +117,27 @@ button:active {
   background-color: rgb(100, 59, 235);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+canvas {
+  height: 200px;
+  width: 200px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.rightPart {
+  padding: 15px;
+  margin: 15px;
+}
+
+.rightPart div {
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #888888;
+  padding: 20px;
+
 }
