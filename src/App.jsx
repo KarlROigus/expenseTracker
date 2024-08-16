@@ -194,7 +194,7 @@ function App() {
       <div className="statistics">
           <div className="statisticssentence">
             <h1>YOUR TOTAL SPENDING IS: </h1>
-            <h1>{Object.values(totalCosts).reduce((prev, current) => prev + current, 0)} €</h1>
+            <h1>{Math.round(Object.values(totalCosts).reduce((prev, current) => prev + current, 0))} €</h1>
           </div>
      </div>
     </>
